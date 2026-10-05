@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Panel vendedor | MALHABER BURGER
+    </title>
+
+    <link rel="stylesheet"
+        href="css/admin.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="admin-header">
+
+        <div>
+
+            <span>
+                PANEL DEL VENDEDOR
+            </span>
+
+            <h1>
+                MALHABER BURGER
+            </h1>
+
+        </div>
+
+        <button
+            onclick="actualizarPedidos()">
+
+            ↻ Actualizar
+
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="estadisticas">
+
+            <article>
+
+                <span>
+                    Pendientes
+                </span>
+
+                <strong id="contador-pendientes">
+                    0
+                </strong>
+
+            </article>
+
+
+            <article>
+
+                <span>
+                    Confirmados
+                </span>
+
+                <strong id="contador-confirmados">
+                    0
+                </strong>
+
+            </article>
+
+
+            <article>
+
+                <span>
+                    Rechazados
+                </span>
+
+                <strong id="contador-rechazados">
+                    0
+                </strong>
+
+            </article>
+
+        </section>
+
+
+        <section>
+
+            <div class="seccion-titulo">
+
+                <span>
+                    PEDIDOS
+                </span>
+
+                <h2>
+                    Solicitudes recibidas
+                </h2>
+
+            </div>
+
+            <div id="lista-pedidos"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

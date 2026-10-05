@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        MALHABER BURGER
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a
+                href="#inicio"
+                class="logo">
+
+                MALHABER
+                <span>
+                    BURGER
+                </span>
+
+            </a>
+
+
+            <ul class="menu">
+
+                <li>
+                    <a href="#inicio">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#menu-productos">
+                        Menú
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#pedido">
+                        Realizar pedido
+                    </a>
+                </li>
+
+
+                <!--
+                    SOLO APARECE
+                    CUANDO EL VENDEDOR
+                    CONFIRMA EL PEDIDO
+                -->
+
+                <li
+                    id="menu-mi-pedido"
+                    class="oculto">
+
+                    <a href="mi-pedido.html">
+                        Mi pedido
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <button
+                class="btn-carrito"
+                onclick="abrirCarrito()">
+
+                🛒
+
+                <span>
+                    Carrito
+                </span>
+
+                <b id="contador-carrito">
+                    0
+                </b>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         PORTADA
+    ========================== -->
+
+    <section
+        id="inicio"
+        class="hero">
+
+        <div class="hero-overlay"></div>
+
+
+        <div class="hero-contenido">
+
+            <span class="hero-etiqueta">
+                🔥 SABOR QUE PROVOCA
+            </span>
+
+
+            <h1>
+
+                TU ANTOJO
+
+                <span>
+                    EMPIEZA AQUÍ
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Hamburguesas, papas, hot dogs,
+                bebidas y combos preparados al momento.
+
+            </p>
+
+
+            <div class="hero-botones">
+
+                <a
+                    href="#menu-productos"
+                    class="btn-naranja">
+
+                    Ver menú
+
+                </a>
+
+
+                <button
+                    class="btn-transparente"
+                    onclick="abrirCarrito()">
+
+                    Ver carrito
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MENÚ DE PRODUCTOS
+    ========================== -->
+
+    <section
+        id="menu-productos"
+        class="seccion">
+
+        <div class="titulo-seccion">
+
+            <span>
+                NUESTRO MENÚ
+            </span>
+
+            <h2>
+                Elige tus favoritos
+            </h2>
+
+            <p>
+                Agrega productos al carrito
+                y arma tu pedido.
+            </p>
+
+        </div>
+
+
+        <div class="productos">
+
+
+            <!-- HAMBURGUESA CLÁSICA -->
+
+            <article class="producto">
+
+                <div class="producto-foto">
+
+                    <img
+                        src="IMAGENES/hamburguesa.png"
+                        alt="Hamburguesa clásica">
+
+                    <span class="badge">
+                        Hamburguesa
+                    </span>
+
+                </div>
+
+
+                <div class="producto-info">
+
+                    <h3>
+                        Hamburguesa Clásica
+                    </h3>
+
+
+                    <p class="descripcion">
+
+                        Carne jugosa, queso,
+                        lechuga, tomate
+                        y salsa especial.
+
+                    </p>
+
+
+                    <div class="ingredientes">
+
+                        <span>
+                            🥩 Carne
+                        </span>
+
+                        <span>
+                            🧀 Queso
+                        </span>
+
+                        <span>
+                            🥬 Lechuga
+                        </span>
+
+                        <span>
+                            🍅 Tomate
+                        </span>
+
+                        <span>
+                            🥫 Salsa
+                        </span>
+
+                    </div>
+
+
+                    <div class="producto-final">
+
+                        <div class="precio">
+
+                            <small>
+                                Precio
+                            </small>
+
+                            <strong>
+                                S/ 12.00
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            onclick="agregarProducto(
+                                'Hamburguesa Clásica',
+                                12
+                            )">
+
+                            + Agregar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- DOBLE POWER -->
+
+            <article class="producto">
+
+                <div class="producto-foto">
+
+                    <img
+                        src="IMAGENES/hamburguesadoble.png"
+                        alt="Hamburguesa doble">
+
+                    <span class="badge badge-rojo">
+                        Doble
+                    </span>
+
+                </div>
+
+
+                <div class="producto-info">
+
+                    <h3>
+                        Doble Power
+                    </h3>
+
+
+                    <p class="descripcion">
+
+                        Doble carne,
+                        doble queso,
+                        tocino y salsa de la casa.
+
+                    </p>
+
+
+                    <div class="ingredientes">
+
+                        <span>
+                            🥩 Doble carne
+                        </span>
+
+                        <span>
+                            🧀 Doble queso
+                        </span>
+
+                        <span>
+                            🥓 Tocino
+                        </span>
+
+                        <span>
+                            🥫 Salsa
+                        </span>
+
+                    </div>
+
+
+                    <div class="producto-final">
+
+                        <div class="precio">
+
+                            <small>
+                                Precio
+                            </small>
+
+                            <strong>
+                                S/ 18.00
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            onclick="agregarProducto(
+                                'Doble Power',
+                                18
+                            )">
+
+                            + Agregar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PAPAS -->
+
+            <article class="producto">
+
+                <div class="producto-foto">
+
+                    <img
+                        src="IMAGENES/papasfritas.png"
+                        alt="Papas fritas">
+
+                    <span class="badge">
+                        Papas
+                    </span>
+
+                </div>
+
+
+                <div class="producto-info">
+
+                    <h3>
+                        Papas XL
+                    </h3>
+
+
+                    <p class="descripcion">
+
+                        Papas doradas y crocantes
+                        acompañadas de salsa especial.
+
+                    </p>
+
+
+                    <div class="ingredientes">
+
+                        <span>
+                            🍟 Papas
+                        </span>
+
+                        <span>
+                            🧂 Sal
+                        </span>
+
+                        <span>
+                            🥫 Salsa
+                        </span>
+
+                    </div>
+
+
+                    <div class="producto-final">
+
+                        <div class="precio">
+
+                            <small>
+                                Precio
+                            </small>
+
+                            <strong>
+                                S/ 8.00
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            onclick="agregarProducto(
+                                'Papas XL',
+                                8
+                            )">
+
+                            + Agregar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- HOT DOG -->
+
+            <article class="producto">
+
+                <div class="producto-foto">
+
+                    <img
+                        src="IMAGENES/perroscalientes.png"
+                        alt="Hot dog">
+
+                    <span class="badge">
+                        Hot Dog
+                    </span>
+
+                </div>
+
+
+                <div class="producto-info">
+
+                    <h3>
+                        Hot Dog Especial
+                    </h3>
+
+
+                    <p class="descripcion">
+
+                        Pan suave,
+                        salchicha,
+                        queso y salsas especiales.
+
+                    </p>
+
+
+                    <div class="ingredientes">
+
+                        <span>
+                            🌭 Salchicha
+                        </span>
+
+                        <span>
+                            🧀 Queso
+                        </span>
+
+                        <span>
+                            🥫 Ketchup
+                        </span>
+
+                        <span>
+                            🟡 Mostaza
+                        </span>
+
+                    </div>
+
+
+                    <div class="producto-final">
+
+                        <div class="precio">
+
+                            <small>
+                                Precio
+                            </small>
+
+                            <strong>
+                                S/ 10.00
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            onclick="agregarProducto(
+                                'Hot Dog Especial',
+                                10
+                            )">
+
+                            + Agregar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- GASEOSA -->
+
+            <article class="producto">
+
+                <div class="producto-foto">
+
+                    <img
+                        src="IMAGENES/vasodegaseosa.png"
+                        alt="Gaseosa">
+
+                    <span class="badge">
+                        Bebida
+                    </span>
+
+                </div>
+
+
+                <div class="producto-info">
+
+                    <h3>
+                        Gaseosa Helada
+                    </h3>
+
+
+                    <p class="descripcion">
+
+                        Bebida refrescante
+                        para acompañar tu pedido.
+
+                    </p>
+
+
+                    <div class="ingredientes">
+
+                        <span>
+                            🥤 Gaseosa
+                        </span>
+
+                        <span>
+                            🧊 Hielo
+                        </span>
+
+                    </div>
+
+
+                    <div class="producto-final">
+
+                        <div class="precio">
+
+                            <small>
+                                Precio
+                            </small>
+
+                            <strong>
+                                S/ 5.00
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            onclick="agregarProducto(
+                                'Gaseosa Helada',
+                                5
+                            )">
+
+                            + Agregar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- COMBO -->
+
+            <article class="producto">
+
+                <div class="producto-foto">
+
+                    <img
+                        src="IMAGENES/combo-malhaber.png"
+                        alt="Combo MALHABER">
+
+                    <span class="badge badge-combo">
+                        Combo
+                    </span>
+
+                </div>
+
+
+                <div class="producto-info">
+
+                    <h3>
+                        Combo MALHABER
+                    </h3>
+
+
+                    <p class="descripcion">
+
+                        Hamburguesa clásica,
+                        papas crocantes
+                        y gaseosa.
+
+                    </p>
+
+
+                    <div class="ingredientes">
+
+                        <span>
+                            🍔 Hamburguesa
+                        </span>
+
+                        <span>
+                            🍟 Papas
+                        </span>
+
+                        <span>
+                            🥤 Gaseosa
+                        </span>
+
+                    </div>
+
+
+                    <div class="producto-final">
+
+                        <div class="precio">
+
+                            <small>
+                                Precio combo
+                            </small>
+
+                            <strong>
+                                S/ 22.00
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            onclick="agregarProducto(
+                                'Combo MALHABER',
+                                22
+                            )">
+
+                            + Agregar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         REALIZAR PEDIDO
+    ========================== -->
+
+    <section
+        id="pedido"
+        class="seccion">
+
+        <div class="titulo-seccion">
+
+            <span>
+                FINALIZA TU COMPRA
+            </span>
+
+            <h2>
+                Completa tu pedido
+            </h2>
+
+            <p>
+                Ingresa tus datos y selecciona
+                cómo deseas recibirlo.
+            </p>
+
+        </div>
+
+
+        <div class="pedido-grid">
+
+
+            <!-- DATOS CLIENTE -->
+
+            <div class="panel">
+
+                <h3>
+                    Datos del cliente
+                </h3>
+
+
+                <label for="nombre">
+                    Nombre
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Ingresa tu nombre">
+
+
+                <label for="celular">
+                    Celular
+                </label>
+
+                <input
+                    type="tel"
+                    id="celular"
+                    placeholder="999 999 999">
+
+
+                <label for="tipoPedido">
+                    Tipo de pedido
+                </label>
+
+                <select
+                    id="tipoPedido"
+                    onchange="cambiarTipoPedido()">
+
+                    <option value="Recojo">
+                        Recojo en tienda
+                    </option>
+
+                    <option value="Delivery">
+                        Delivery
+                    </option>
+
+                </select>
+
+
+                <div
+                    id="contenedor-direccion"
+                    class="oculto">
+
+                    <label for="direccion">
+                        Dirección
+                    </label>
+
+                    <input
+                        type="text"
+                        id="direccion"
+                        placeholder="Ingresa tu dirección">
+
+                </div>
+
+
+                <label for="metodoPago">
+                    Método de pago
+                </label>
+
+                <select id="metodoPago">
+
+                    <option value="Yape">
+                        Yape
+                    </option>
+
+                    <option value="Efectivo">
+                        Efectivo
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- RESUMEN -->
+
+            <div class="panel">
+
+                <h3>
+                    Resumen del pedido
+                </h3>
+
+
+                <div id="resumen-pedido">
+
+                    <p class="mensaje-vacio">
+
+                        Todavía no agregaste
+                        productos.
+
+                    </p>
+
+                </div>
+
+
+                <div class="total-pedido">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="total-resumen">
+                        S/ 0.00
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="btn-finalizar"
+                    onclick="finalizarPedido()">
+
+                    Continuar con el pago
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CARRITO
+    ========================== -->
+
+    <div
+        id="modal-carrito"
+        class="modal">
+
+        <div class="modal-contenido">
+
+            <button
+                class="btn-cerrar"
+                onclick="cerrarCarrito()">
+
+                ×
+
+            </button>
+
+
+            <h2>
+                🛒 Tu carrito
+            </h2>
+
+
+            <div id="productos-carrito"></div>
+
+
+            <div class="total-modal">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total-carrito">
+                    S/ 0.00
+                </strong>
+
+            </div>
+
+
+            <button
+                class="btn-finalizar"
+                onclick="irFinalizarPedido()">
+
+                Finalizar pedido
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         YAPE
+    ========================== -->
+
+    <div
+        id="modal-yape"
+        class="modal">
+
+        <div class="modal-contenido yape">
+
+            <button
+                class="btn-cerrar"
+                onclick="cerrarYape()">
+
+                ×
+
+            </button>
+
+
+            <div class="yape-marca">
+                YAPE
+            </div>
+
+
+            <h2>
+                Realiza tu pago
+            </h2>
+
+
+            <p class="texto-secundario">
+
+                Escanea el QR
+                desde tu aplicación Yape.
+
+            </p>
+
+
+            <img
+                src="IMAGENES/yape-qr.png"
+                alt="QR de Yape"
+                class="qr-yape">
+
+
+            <p class="texto-total">
+                MONTO A PAGAR
+            </p>
+
+
+            <strong id="monto-yape">
+                S/ 0.00
+            </strong>
+
+
+            <div class="aviso-pago">
+
+                <span>
+                    ⚠️
+                </span>
+
+                <p>
+
+                    Luego de realizar el pago,
+                    envía tu solicitud para que
+                    el vendedor pueda verificarla.
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="btn-yape"
+                onclick="enviarPagoVerificacion()">
+
+                ENVIAR PAGO PARA VERIFICACIÓN
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         VERIFICACIÓN
+    ========================== -->
+
+    <div
+        id="modal-verificacion"
+        class="modal">
+
+        <div class="modal-contenido verificacion">
+
+            <div
+                id="icono-verificacion"
+                class="icono-verificacion">
+
+                ⏳
+
+            </div>
+
+
+            <h2 id="titulo-verificacion">
+
+                Pedido enviado para verificación
+
+            </h2>
+
+
+            <p id="mensaje-verificacion">
+
+                Estamos revisando tu pedido.
+                Por favor espera mientras
+                el vendedor lo confirma.
+
+            </p>
+
+
+            <div
+                id="loader-verificacion"
+                class="loader-verificacion">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+            <div class="codigo-cliente">
+
+                Pedido
+
+                <strong id="codigo-cliente">
+                    MB-00000
+                </strong>
+
+            </div>
+
+
+            <!--
+                ESTE BOTÓN SOLO
+                APARECERÁ DESPUÉS
+                DE LA CONFIRMACIÓN
+            -->
+
+            <a
+                href="mi-pedido.html"
+                id="btn-ver-mi-pedido"
+                class="btn-ver-mi-pedido oculto">
+
+                VER MI PEDIDO
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         TICKET
+    ========================== -->
+
+    <div
+        id="modal-ticket"
+        class="modal">
+
+        <div class="ticket">
+
+            <button
+                class="btn-cerrar-ticket no-imprimir"
+                onclick="cerrarTicket()">
+
+                ×
+
+            </button>
+
+
+            <div id="contenido-ticket"></div>
+
+
+            <button
+                class="btn-imprimir no-imprimir"
+                onclick="window.print()">
+
+                🖨 Imprimir ticket
+
+            </button>
+
+
+            <button
+                class="btn-nuevo no-imprimir"
+                onclick="nuevoPedido()">
+
+                Nuevo pedido
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h3>
+            MALHABER BURGER
+        </h3>
+
+        <p>
+            Hamburguesas, papas
+            y mucho sabor.
+        </p>
+
+        <small>
+            © 2026 MALHABER BURGER
+        </small>
+
+    </footer>
+
+
+
+    <div id="notificacion"></div>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
